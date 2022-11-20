@@ -1,16 +1,22 @@
 package com.ysl.bookingtest.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sun.istack.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Future;
 import java.time.LocalDateTime;
 
 public class CreateAvailabilityRequest {
 
+    @NotNull
+    @Future
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime from;
 
+    @NotNull
+    @Future
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime to;
