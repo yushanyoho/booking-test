@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 public class CreateAvailabilityRequest {
 
     @NotNull
+    // Provide time must be in the future
     @Future
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")

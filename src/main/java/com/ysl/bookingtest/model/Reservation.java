@@ -7,6 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
+// Database will be created for each model with @Entity
 @Entity(name = "Reservation")
 @Data
 @NoArgsConstructor
